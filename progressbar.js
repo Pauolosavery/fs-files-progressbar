@@ -1,5 +1,5 @@
 const fs = require('fs');
-// Раскомментируй только для релиза 3.
+// Раскомментируй только для релиза 4.
 // const runInteractiveConsole = require('./interactive');
 // runInteractiveConsole();
 
