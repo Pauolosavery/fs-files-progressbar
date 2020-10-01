@@ -45,7 +45,7 @@ function doSomethingWithFlags(results) {
 
 Тебе могут пригодиться следующие fs-методы:
 - fs.readdir(path, callback)
-- fs.stat(data, callback)
+- fs.stat(path, callback)
   - stats.isFile()
   - stats.isDirectory()
 
