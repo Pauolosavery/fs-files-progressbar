@@ -1,11 +1,15 @@
-## Ожидание загрузки файлов
 
-Ты уже делал(а) задание c [прогрессбаром](https://github.com/Elbrus-Bootcamp/extra-algorithm-progressbar)? Если еще нет - рекомендуем к нему вернуться в свободное время!
+## Waiting for files to download
 
-Когда пользователь загружает страницу - данные с сервера поступают на клиент асинхронно и неравномерно. Давай смоделируем такое поведение при помощи файловой системы твоего проекта. Тебе предстоит написать progressbar, применимый не к статически заданному времени, а к размеру "загружаемых" файлов. К сожалению, ты пока не сможешь связать свою веб-версию прогрессбара (frontend/client) и работу с файлами (backend/server), однако прогрессбар можно реализовать в консольном виде.
+Have you already done a challenge with [progressbar] (https://github.com/Elbrus-Bootcamp/extra-algorithm-progressbar)? If not yet, we highly recommend that you return to it in your spare time!
+
+When the user loads the page, the data from the server arrives at the client asynchronously and unevenly. Let's simulate this behavior using your project's file system. You have to write a progressbar that applies not to a statically set time but to the size of the "loaded" files. Unfortunately, you won't be able to link your web version of the progress bar (frontend / client) with working with files (backend / server) yet, but the progress bar can be implemented in the console form.
 
 ### Как синхронизировать между собой множество асинхронных функций?
 Изучите пример ниже. Это **один из** способов синхронизации выполнения асинхронных функций.
+
+### How to synchronize multiple asynchronous functions with each other?
+Check out the example below. This is **one of the ways** to synchronize the execution of asynchronous functions.
 
 ```js
 function asyncFunction(flag, callback) {
@@ -35,39 +39,39 @@ function doSomethingWithFlags(results) {
 }
 ```
 
-### Release 0. Подготовка файлов
-На этом этапе тебе необходимо создать минимум 10 файлов (чем больше - тем интереснее). Наполни эти файлы разным количеством информации. Это может быть одно слово или 20 страниц - все зависит от твоего интереса. Кстати, файлами могут быть даже картинки, но, желательно, чтобы они весили достаточно много. Помни, количество информации в каждом файле должно быть разным, чтобы у тебя получились файлы разного размера. Файлы не обязательно должны быть одинакового расширения.
+### Release 0. Preparing of the files
+At this stage, you need to create at least 10 files (the more, the more interesting). Fill these files with different amounts of information. It can be one word or 20 pages - it all depends on your interest. By the way, files can even be pictures but it will be better if they weigh a lot. Remember, the amount of information in each file must be different so that you end up with different file sizes. The files do not need to have the same extension.
 
-**Совет:** создай файлы в отдельной директории, чтобы там кроме этих файлов ничего не находилось. На самом деле тебе предоставлена папка `files`, в которой уже есть примеры файлов. И будь аккуратнее, когда пытаешься открыть большие файлы - твой компьютер может зависнуть. Для создания файлов можно использовать команду `dd if=/dev/urandom of=filename.txt bs=500M count=1`.
+**A piece of advice:** create files in separate directories so there is nothing but these files. In fact you have a folder named `files` which contains examples of such files. And be cautious when you try to open large files - your computer might freeze. To create files you can use the command `dd if=/dev/urandom of=filename.txt bs=500M count=1`.
 
-### Release 1. Работа с fs. Асинхронный вариант. 30 минут
-А теперь зайди в директорию, где лежат твои текстовые файлы (`files`) и получи мета-информацию о них (общее количество, название, размер, даты создания и т.д.).
+### Release 1. Working with fs. Asynchronous version. 30 minutes
+Now go to the directory when you have you text files (`files`) and get there meta information (total number, name, size, creation dates and etc)
 
-Тебе могут пригодиться следующие fs-методы:
+You might need the following fs methods:
 - fs.readdir(path, callback)
 - fs.stat(path, callback)
   - stats.isFile()
   - stats.isDirectory()
 
-Через 30 минут переходи к следующему заданию.
+In 30 minutes start move on to the next challenge.
 
-### Release 2. Синхронный вариант
+### Release 2. Synchronous version
 
-Тебе могут пригодиться следующие fs-методы:
+You might need the following fs methods:
 - fs.readdirSync(path)
 - fs.statSync(path)
   - stats.isFile()
   - stats.isDirectory()
  
 ### Release 3. Progressbar
-Наконец, на основании полученых размеров файлов, реализуй свой progressbar. Твой прогрессбар будет заполняться до общего размера всех имеющихся файлов. Если у тебя есть файл, размером 5Кб при общем размере всех файлов - 10 Кб, то твоя полоса загрузки после обработки такого файла должна заполниться на 50% (100% * (5Кб / 10Кб))
 
-Сделай полосу загрузки(progressbar) в **Консоли Терминала**. Не в браузере! Она должна увеличиваться с каждым новым загруженным файлом.
+Finally, based on the results you got about the file sizes, create your progressbar. Your progressbar will be filled up to the total size of all the available files. If you have a file with a size of 5Kb and the total size of all files is 10Kb, then your download bar should be 50% full after processing such a file (100% * (5Kb / 10Kb))
 
-### Release 4. Зачем же асихронно? (Опционально)
+Make a progressbar in the **Terminal Console**. Not in the browser! It should increase with every new uploaded file.
+### Release 4. Why use asynchrony? (optional)
 
-Возможно, ты сделал задание, но так и не понял зачем нужны были асинхронные методы. В таком случае давай сделаем приложение более реалистичным. При запуске программы будет открываться интерактивная консоль. Если ты нажмёшь на любую кнопку на клавиатуре, то консоль напишет тебе: `You pressed the "x" key`. Своего рода минимальное взаимодействие приложения с пользователем. А теперь запусти свою загрузку файлов. Если твоя реализация асинхронна, то ты, может быть, даже не почувствуешь, что программа что-то пытается загрузить. А вот если ты используешь синхронные методы... Тогда ты будешь очень недоволен, что программа так долго не реагирует на твои интенсивные нажатия на кнопки.
+Perhaps you finished the challenge but still did not understand why you needed asynchronous methods. In that case, let's make the app more realistic. When you start the program, an interactive console will open. If you press any button on the keyboard, the console will display: `You pressed the "x" key`. This is a kind of minimal interaction between a user and the app. Now start your file upload. If your implementation is asynchronous, then you may not even feel that the program is trying to load something. But if you use synchronous methods... Then you will be very unhappy that the program does not respond to your intense button presses for so long.
 
-## Вывод
+## Conclusion
 
-Асинхронность - это хорошо. Учись работать с ней, люби её и не обижай!
+Asynchrony is a good thing. Learn how to work with it, love it and don't offend it!
