@@ -76,4 +76,4 @@ Perhaps you finished the challenge but still did not understand why you needed a
 
 Asynchrony is a good thing. Learn how to work with it, love it and don't offend it!
 
-[progressbar]: (https://github.com/Elbrus-Bootcamp/extra-algorithm-progressbar)
+[progressbar]: https://github.com/Elbrus-Bootcamp/extra-algorithm-progressbar RU
