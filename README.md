@@ -1,7 +1,7 @@
 
 ## Waiting for files to download
 
-Have you already done a challenge with [progressbar] (https://github.com/Elbrus-Bootcamp/extra-algorithm-progressbar)? If not yet, we highly recommend that you return to it in your spare time!
+Have you already done a challenge with [progressbar] ? If not yet, we highly recommend that you return to it in your spare time!
 
 When the user loads the page, the data from the server arrives at the client asynchronously and unevenly. Let's simulate this behavior using your project's file system. You have to write a progressbar that applies not to a statically set time but to the size of the "loaded" files. Unfortunately, you won't be able to link your web version of the progress bar (frontend / client) with working with files (backend / server) yet, but the progress bar can be implemented in the console form.
 
@@ -75,3 +75,5 @@ Perhaps you finished the challenge but still did not understand why you needed a
 ## Conclusion
 
 Asynchrony is a good thing. Learn how to work with it, love it and don't offend it!
+
+[progressbar]: (https://github.com/Elbrus-Bootcamp/extra-algorithm-progressbar) RU
