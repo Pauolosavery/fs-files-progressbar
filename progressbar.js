@@ -1,9 +1,9 @@
 const fs = require('fs');
-// Раскомментируй только для релиза 4.
+// Uncomment only for Release 4
 // const runInteractiveConsole = require('./interactive');
 // runInteractiveConsole();
 
-// Асинхронная загрузка.
+// Asynchronous loading
 function loadFiles() {
 
 }
