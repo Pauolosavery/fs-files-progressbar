@@ -1,12 +1,12 @@
-// ТОЛЬКО ДЛЯ РЕЛИЗА 4!
+// ONLY FOR RELEASE 4!
 
-// Тут представлена функция, которая открывает интерактивную консоль.
-// Можешь нажимать на кнопки, и консоль тут же будет говорить тебе на 
-// какую кнопку ты нажал.
-// Разбираться в том как работает метод пока не обязательно,
-// тебе надо его запустить в своей программе,
-// что позволит увидеть, что синхронные методы 
-// сильно тормозят взаимодействие программы с пользователем.
+// Here you can see a function that opens the interactive console.
+// You can press the buttons and the console will immediately tell you
+// which button you pressed.
+// It is not necessary to understand how the method works yet,
+// you need to run it in your program,
+// which will allow you to see that synchronous methods
+// really slow down the interaction of the program with the user.
 const readline = require('readline');
 
 function runInteractiveConsole() {
