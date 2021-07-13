@@ -5,8 +5,6 @@ Have you already done a challenge with [progressbar] ? If not yet, we highly rec
 
 When the user loads the page, the data from the server arrives at the client asynchronously and unevenly. Let's simulate this behavior using your project's file system. You have to write a progressbar that applies not to a statically set time but to the size of the "loaded" files. Unfortunately, you won't be able to link your web version of the progress bar (frontend / client) with working with files (backend / server) yet, but the progress bar can be implemented in the console form.
 
-### Как синхронизировать между собой множество асинхронных функций?
-Изучите пример ниже. Это **один из** способов синхронизации выполнения асинхронных функций.
 
 ### How to synchronize multiple asynchronous functions with each other?
 Check out the example below. This is **one of the ways** to synchronize the execution of asynchronous functions.
